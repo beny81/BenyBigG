@@ -29,10 +29,7 @@ document.addEventListener("DOMContentLoaded",
               //             }); 
            
 
-                 document.querySelector("#bell")
-                      .addEventListener("click",()=> {  
-
-                    Notification.requestPermission().then (perm =>{
+                 Notification.requestPermission().then (perm =>{
                         // alert("hello")
                         if(perm=== "granted"){
                            new Notification("hello");
@@ -42,7 +39,8 @@ document.addEventListener("DOMContentLoaded",
                           body:"Have a great day"
                           
                           
-                          })
+                         })
+                        
                             
 
 
@@ -50,7 +48,7 @@ document.addEventListener("DOMContentLoaded",
                           
 
                            })
-                      })
+                     
 
          
 

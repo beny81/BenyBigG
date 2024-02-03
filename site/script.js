@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded",
            
 
                  Notification.requestPermission().then (perm =>{
-                        // alert("hello")
+                        alert("hello")
                         if(perm=== "granted"){
                            new Notification("hello");
                            console.log("hello");

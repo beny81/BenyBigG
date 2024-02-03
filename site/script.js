@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded",
                           
                          })
                         
-                            
+                             alert("Granted ok")
 
 
                             }
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded",
          
    document.querySelector("#bell")
                       .addEventListener("click", function(event){
-
+                             alert("Test 1")
                             new Notification("Merci d'avoir clicke");
 
                       })

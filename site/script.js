@@ -30,22 +30,22 @@ document.addEventListener("DOMContentLoaded",
            
 
                  Notification.requestPermission().then (perm =>{
-                        alert("hello")
+                        
                         if(perm=== "granted"){
-                           new Notification("hello");
-                           console.log("hello");
-                          new Notification("Hello",{      
+                           
                           
-                          body:"Have a great day"
+                          new Notification("FDS-TOURNOIS",{      
+                          
+                          body:"Le match commence"
                           
                           
                          })
                         
-                             alert("Granted ok")
+                           
 
 
                             }
-                            alert("Test 1")
+                           
 
                            })
                      
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded",
          
    document.querySelector("#bell")
                       .addEventListener("click", function(event){
-                             alert("Test 1")
+                            
                             new Notification("Merci d'avoir clicke");
 
                       })

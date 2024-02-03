@@ -45,13 +45,18 @@ document.addEventListener("DOMContentLoaded",
 
 
                             }
-                          
+                            alert("Test 1")
 
                            })
                      
 
          
+   document.querySelector("#bell")
+                      .addEventListener("click", function(event){
 
+                            new Notification("Merci d'avoir clicke");
+
+                      })
                                                                 
                  
                               

@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded",
 
                       })
                                                                 
-                 
+                  new Notification("How are you doing?");
                               
        });
 // var showLoading = function (selector) {

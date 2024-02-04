@@ -27,40 +27,66 @@ document.addEventListener("DOMContentLoaded",
                               
                          
               //             }); 
+
+
+          Notification.requestPermission().then(function(permission) {
+  if (permission === 'granted') {
+    console.log('Permission accordée pour les notifications');
+  } else {
+    console.error('Permission refusée pour les notifications');
+  }
+});
+
            
 
-                 Notification.requestPermission().then (perm =>{
-                        
+                 document.querySelector("#bell")
+                      .addEventListener("click",()=> {  
+
+                    Notification.requestPermission().then (perm =>{
+                        // alert("hello")
                         if(perm=== "granted"){
-                           
+                         
+                           console.log("hello");
+                          new Notification("Notification-FDS Tournois",{      
                           
-                          new Notification("FDS-TOURNOIS",{      
+                          body:"Have a great day",
+                              tag:"hello"
                           
-                          body:"Le match commence"
                           
-                          
-                         })
-                        
-                           
+                          })
+                            
 
 
                             }
-                           
+                          
 
                            })
-                     
+                      })
 
          
-   document.querySelector("#bell")
-                      .addEventListener("click", function(event){
-                            
-                            new Notification("Merci d'avoir clicke");
 
-                      })
                                                                 
-                  new Notification("How are you doing?");
+                 
                               
        });
+const registerSw = async ()=>{
+
+    const registration = await navigator.serviceWorker.register("notif.js");
+    return registration;
+
+
+    }
+registerSw();
+
+
+
+
+
+
+
+
+
+
 // var showLoading = function (selector) {
 //   var html = "<div class='text-center'>";
 //   html += "<img src='images/ajax-loader.gif'></div>";
